@@ -7,24 +7,24 @@ body {
 header {
   position: fixed;
   top: 0;
-  left: 0; /* Full width now */
-  right: 0;
-  height: 60px;
-  background-color: #ffffff;
+  left: 0; /* important: stretch it all the way to the left */
+  width: 100%;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 200px; /* Left padding accounts for sidebar width */
+  height: 60px;
+  padding: 0 20px 0 20px; /* adjust left padding if sidebar overlaps */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 html, body {
   height: 100%;
 }
 
 .container {
+  margin-top: 60px; /* same as header height */
   display: flex;
-  min-height: 100vh; 
 }
 
 aside {

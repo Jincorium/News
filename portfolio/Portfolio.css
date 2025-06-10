@@ -32,14 +32,17 @@ html, body {
 
 aside {
   width: 105px;
-  height: 100vh;           
-  background-color: #a3bbc5; 
+  height: 100vh;
+  background-color: #a3bbc5;
   padding: 20px;
   border-right: 1px solid #ddd;
-
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 60px; /* matches header height */
+  left: 0;
 }
+
 
 
 .icons {

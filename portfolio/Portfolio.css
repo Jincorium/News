@@ -60,6 +60,11 @@ aside {
   top: 60px; /* matches header height */
   left: 0;
 }
+main#content {
+  margin-left: 270px; /* Sidebar width + padding */
+  padding: 20px;
+  background-color: #f0f4f8;
+}
 
 .icons {
   margin-top: auto;
@@ -168,4 +173,10 @@ a:hover {
   height: 45px;
   margin-left: 10px;
   vertical-align: middle;
+}
+
+.instagram-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain; /* ensures it fits nicely without distortion */
 }

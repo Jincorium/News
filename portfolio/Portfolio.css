@@ -175,8 +175,8 @@ a:hover {
   vertical-align: middle;
 }
 
-.instagram-icon {
+.icon {
   width: 45px;
   height: 45px;
-  object-fit: contain; /* ensures it fits nicely without distortion */
+  object-fit: contain;
 }

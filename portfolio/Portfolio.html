@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikita Lobastov</title>
+  <link rel="stylesheet" href="Portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    /* Play button overlay and video iframe styling */
+    .video-wrapper {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 4px; /* match your card border radius */
+    }
+
+    .video-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      background: url('https://cdn-icons-png.flaticon.com/512/727/727245.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      pointer-events: none; /* lets clicks go to wrapper */
+    }
+
+    .video-wrapper:hover .play-button {
+      opacity: 1;
+    }
+
+    .video-iframe {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      position: relative;
+      border-radius: 4px;
+    }
+
+    .video-iframe iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="support-text">
+      Please support independent but biased news.
+      <a href="https://www.donationalerts.com/" target="_blank">
+        <img src="donationalerts-seeklogo.svg" alt="Donate" class="donation-icon">
+      </a>
+    </div>
+<div class="email">
+  <a href="mailto:lobastovn04@gmail.com">lobastovn04@gmail.com</a>
+</div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <h1>Nikita Lobastov</h1>
+      <nav>
+        <ul>
+          <li><a href="Portfolio.html">Recent</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <div class="icons" style="margin-top: auto;">
+        <a href="https://www.instagram.com/barackobama/" target="_blank">
+        <img src="Instagram.png" alt="Instagram" class="icon" />
+        </a>
+        </div>
+    </aside>
+
+    <main id="content">
+      <div class="grid">
+        <div class="card">
+          <img src="https://www.cdjlawjournal.com/dE!T@/image_attachment/1187389422download%20(2).jpeg" alt="CDJ Law Journal" />
+          <h3>Supreme Court upholds inclusive digital access as a part of fundamental right to life </h3>
+          <p>Civil Times</p>
+        </div>
+
+       <div class="card video-card" data-video-id="f9u63nHzMuY">
+          <div class="video-wrapper">
+            <img src="2025-04-14T000121Z_520628190_RC23MDASKHTQ_RTRMADP_3_CHINA-SOUTHEAST-ASIA-VIETNAM.jpg" alt="China's economy" />
+            <div class="play-button"></div>
+          </div>
+          <h3>Xi says China's economy should adapt to external changes</h3>
+          <p>Economy</p>
+        </div>
+
+
+
+        <div class="card">
+            <a href="osaka-article.html">
+            <img src="Osaka.jpg" alt="Osaka Expo" />
+          </a>
+          <h3>As The U.S Marks 1 Million COVID-19 Deaths...</h3>
+          <p>USA Today</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.video-card').forEach(card => {
+      const wrapper = card.querySelector('.video-wrapper');
+      const videoId = card.getAttribute('data-video-id');
+
+      wrapper.addEventListener('click', () => {
+        const iframeWrapper = document.createElement('div');
+        iframeWrapper.classList.add('video-iframe');
+
+        iframeWrapper.innerHTML = `
+          <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen></iframe>`;
+
+
+        wrapper.replaceWith(iframeWrapper);
+      });
+    });
+  </script>
+</body>
+</html>

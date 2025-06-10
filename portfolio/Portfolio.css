@@ -1,11 +1,7 @@
 HEAD
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
 }
 
 header {
@@ -31,16 +27,15 @@ html, body {
 }
 
 aside {
-  width: 105px;
-  height: 100vh;
-  background-color: #a3bbc5;
-  padding: 20px;
-  border-right: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
   position: fixed;
-  top: 60px; /* matches header height */
+  top: 0;
   left: 0;
+  width: 180px;
+  height: 100vh;
+  background-color: #b0c4c9;
+  padding: 20px 10px;
+  z-index: 1000;
+  overflow-y: auto;
 }
 
 
@@ -289,25 +284,26 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 180px; /* matches sidebar width */
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
   display: flex;
-  
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   padding: 10px 20px;
-  font-size: 14px;
-  border-bottom: 1px solid #cbd2d9;
-  font-family: 'Merriweather', serif;
-  margin: 0;
-  line-height: 1.2;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 html, body {
   height: 100%;
 }
 
 .container {
-  display: flex;
-  min-height: 100vh; 
+  margin-left: 180px; /* space for sidebar */
+  padding-top: 60px;  /* space for header */
 }
 
 aside {
@@ -552,8 +548,10 @@ main#content article a:hover {
   min-height: 100vh;
 }
 
-.fake-sidebar {
-  width: 105px;
-  background-color: #a3bbc5; 
+
+.main-content {
+  margin-left: 180px; /* same as sidebar width */
+  padding-top: 60px; /* same as header height */
 }
+
 

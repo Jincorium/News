@@ -308,14 +308,22 @@ html, body {
 }
 
 aside {
-  width: 105px;
-  height: 100vh;           
-  background-color: #a3bbc5; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #f8f8f8;
   padding: 20px;
-  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+}
 
-  display: flex;
-  flex-direction: column;
+
+main#content {
+  margin-left: 270px;
+  padding: 20px;
 }
 
 
@@ -545,8 +553,7 @@ main#content article a:hover {
   color: #495f5b; 
 }
 .container {
-  display: flex;
-  min-height: 100vh;
+  display: block; 
 }
 
 .fake-sidebar {

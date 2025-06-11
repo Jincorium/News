@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 
   <style>
-    /* Play button overlay and video iframe styling */
     .video-wrapper {
       position: relative;
       cursor: pointer;
       overflow: hidden;
-      border-radius: 4px; /* match your card border radius */
+      border-radius: 4px;
     }
 
     .video-wrapper img {
@@ -34,7 +32,7 @@
       background-size: contain;
       opacity: 0.8;
       transition: opacity 0.3s ease;
-      pointer-events: none; /* lets clicks go to wrapper */
+      pointer-events: none;
     }
 
     .video-wrapper:hover .play-button {
@@ -44,7 +42,7 @@
     .video-iframe {
       width: 100%;
       height: 0;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
       position: relative;
       border-radius: 4px;
     }
@@ -60,6 +58,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="support-text">
@@ -70,36 +69,35 @@
     </div>
   </header>
 
-<div class="container"> 
-  <aside>
-    <h1>Nikita Lobastov</h1>
-    <nav>
-      <ul>
-        <li><a href="Portfolio.html">Recent</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-    
-    <div class="icons" style="margin-top:10px;">
-  <a href="https://www.instagram.com/barackobama/" target="_blank">
-    <img src="pictures/Instagram.png" alt="Instagram" class="icon" />
-  </a>
-  <a href="mailto:lobastovn04@gmail.com" title="Email">
-    <img src="pictures/email.png" alt="Email" class="icon" />
-  </a>
-</div>
-  </aside>
-</div>
+  <div class="container"> 
+    <aside>
+      <h1>Nikita Lobastov</h1>
+      <nav>
+        <ul>
+          <li><a href="Portfolio.html">Recent</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+      
+      <div class="icons" style="margin-top:10px;">
+        <a href="https://www.instagram.com/barackobama/" target="_blank">
+          <img src="pictures/Instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="mailto:lobastovn04@gmail.com" title="Email">
+          <img src="pictures/email.png" alt="Email" class="icon" />
+        </a>
+      </div>
+    </aside>
 
     <main id="content">
       <div class="grid">
         <div class="card">
           <img src="https://www.cdjlawjournal.com/dE!T@/image_attachment/1187389422download%20(2).jpeg" alt="CDJ Law Journal" />
-          <h3>Supreme Court upholds inclusive digital access as a part of fundamental right to life </h3>
+          <h3>Supreme Court upholds inclusive digital access as a part of fundamental right to life</h3>
           <p>Civil Times</p>
         </div>
 
-       <div class="card video-card" data-video-id="f9u63nHzMuY">
+        <div class="card video-card" data-video-id="f9u63nHzMuY">
           <div class="video-wrapper">
             <img src="pictures/2025-04-14T000121Z_520628190_RC23MDASKHTQ_RTRMADP_3_CHINA-SOUTHEAST-ASIA-VIETNAM.jpg" alt="China's economy" />
             <div class="play-button"></div>
@@ -108,10 +106,8 @@
           <p>Economy</p>
         </div>
 
-
-
         <div class="card">
-            <a href="osaka-article.html">
+          <a href="osaka-article.html">
             <img src="pictures/Osaka.jpg" alt="Osaka Expo" />
           </a>
           <h3>As The U.S Marks 1 Million COVID-19 Deaths...</h3>
@@ -119,7 +115,7 @@
         </div>
       </div>
     </main>
-  </div>
+  </div> <!-- closes container -->
 
   <script>
     document.querySelectorAll('.video-card').forEach(card => {
@@ -135,11 +131,9 @@
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowfullscreen></iframe>`;
 
-
         wrapper.replaceWith(iframeWrapper);
       });
     });
   </script>
 </body>
 </html>
-

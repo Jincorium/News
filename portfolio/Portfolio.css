@@ -11,10 +11,6 @@ header {
   width: 100%;
   height: 60px;
   background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px; /* optional: tweak spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -555,4 +551,12 @@ main#content article a:hover {
   padding-top: 60px; /* same as header height */
 }
 
+.header-inner {
+  padding-left: 185px; /* 145 (sidebar) + 40 (gap) */
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
 

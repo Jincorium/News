@@ -560,3 +560,16 @@ main#content article a:hover {
   height: 60px;
 }
 
+.sidebar-icon-img {
+  display: block;
+  width: 24px;      /* or your desired size */
+  height: 24px;
+  margin: 20px auto;
+  cursor: pointer;
+  filter: grayscale(100%); /* optional for style */
+  transition: filter 0.2s ease;
+}
+
+.sidebar-icon-img:hover {
+  filter: grayscale(0%);
+}

@@ -7,8 +7,13 @@
   --link-color: #4368b1;
   --h1-color: #000000;
 }
-html {
-  overflow-y: scroll; 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;  /* let vertical scrolling happen here */
+}
 body {
   margin: 0;
   padding: 0;
@@ -80,6 +85,8 @@ aside {
   background-color: var(--aside-bg);
   box-sizing: border-box;
   text-align: left;
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
 }
 
 

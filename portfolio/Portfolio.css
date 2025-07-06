@@ -34,6 +34,7 @@ body.warm-mode {
 
 header {
   display: flex;
+  justify-content: space-between; 
   align-items: center;
   padding: 0 20px;
   height: 50px;
@@ -49,19 +50,18 @@ header {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 10px; /* space inside left if needed */
+  gap: 10px; 
 }
 
 .header-right {
   display: flex;
-  gap: 10px;   /* space between buttons */
-  margin-left: 15px; /* push to right side */
+  gap: 1rem; 
 }
 .header-right button:hover {
   background-color: var(--link-color);
   color: white;
+  cursor: pointer;
 }
-
 .container {
   display: flex;
   min-height: 100vh;

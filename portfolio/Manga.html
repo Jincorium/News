@@ -1,137 +1,102 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blue Ocean Dome - Osaka Expo 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manga Earthquake Prediction</title>
   <link rel="stylesheet" href="Portfolio.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <script src="Portfolio.js" defer></script>
-    <style>
-
-    .video-wrapper {
-      position: relative;
-      cursor: pointer;
-      overflow: hidden;
-      border-radius: 4px; /* match your card border radius */
-    }
-
-    .video-wrapper img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 64px;
-      height: 64px;
-      background: url('https://cdn-icons-png.flaticon.com/512/727/727245.png') no-repeat center center;
-      background-size: contain;
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-      pointer-events: none; /* lets clicks go to wrapper */
-    }
-
-    .video-wrapper:hover .play-button {
-      opacity: 1;
-    }
-
-    .video-iframe {
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      position: relative;
-      border-radius: 4px;
-    }
-
-    .video-iframe iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      border-radius: 4px;
-    }
-  </style>
+  <script src="Portfolio.js" defer></script> <!-- Assuming main.js has your dark mode + listen code -->
 </head>
 <body>
- <header>
-  <div class="support-text header-left">
-    Please support independent but biased news.
-    <a href="https://www.donationalerts.com/" target="_blank">
-      <img src="pictures/donationalerts-seeklogo.svg" alt="Donate" class="donation-icon">
+    <div id="warmOverlay"></div>
+  <header>
+    <h1>Independent yet biased</h1>
+    <div class="header-support">
+    <h1 class="support-text">Support our biases</h1>
+     <a href="https://www.donationalerts.com/" target="_blank">
+    <img src="https://www.donationalerts.com/img/header/logo.svg" alt="Donate" class="donation-icon" />
     </a>
   </div>
-  <div class="header-right">
-    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
-    <button id="warm-mode-toggle" aria-label="Toggle Warm Mode">🙈</button>
-  </div>
-</header>
-  <div class="container">
-    <aside>
-      <h1>Nikita Lobastov</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Recent</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-        </ul>
-      </nav>
-        <div class="icons" style="margin-top:5px;">
-          <a href="https://www.instagram.com/barackobama/" target="_blank" style="font-size: 1.5rem; text-decoration: none;">🌅</a>
-      </div>
-      <div class="icons" style="margin-top:5px;">
-          <a href="mailto:lobastovn04@gmail.com" target="_blank" style="font-size: 1.5rem; text-decoration: none;">✉️</a>
-      </div>
-    </aside>
+    <div id="modeButtons">
+  <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
 
-    <main id="content">
-      <article id="article-content">
-        <div id="read-time"></div>
-        <h1>A Manga Is Causing Earthquake Panic in Japan</h1>
-        <h3>Panic in Tokyo</h3>
-        <p>Earthquakes can’t be predicted. Scientists agree that precise predictions of a time, place, and magnitude is not possible with current technologies. </p>
+</div>
+  </header>
 
-        <p>Yet a years-old Japanese manga that claims a “megaquake”—those above a magnitude of 8.0 on the Richter scale—will strike on July 5 has generated panic and deterred some inbound travelers for the past several months. </p>
+    <div class="side-actions top">
+        <a href="index.html" class="side-button" title="Home">🏠</a>
+        <button id="listenButton" class="side-button" title="Listen">🔊</button>
+        <button id="likeButton" class="side-button" title="Like this article">❤️</button>
+        <button id="commentButton" class="side-button" title="Add Comment">💬</button>
+    </div>
 
-        <p>The 2021 reprint of The Future I Saw by Ryo Tatsuki, a retired mangaka in her 70s, warns that a “huge” tsunami “three times the size” of the 2011 Great East Japan Earthquake will wash over countries in the Pacific Ocean. The first edition of the manga, published in 1999, had referred to a “great disaster” in March 2011 that coincided with the earthquake that killed more than 18,000 people and caused the Fukushima Daiichi nuclear power plant disaster.</p>
+  <main class="article-page">
+    <div id="article-wrapper" data-article-id="manga">
+      <div id="article-content">
+        <span id="reading-time"></span>
+        <h2 class="headline">Japan Earthquake Prediction Manga Sparks Widespread Anxiety</h2>
+        <div class="meta">
+          <span class="author">By Independent Observer</span> •
+          <span class="date">July 7, 2025</span>
+        </div>
 
-        <p>Last month, Tatsuki appeared to scale back her prediction about a July 5 megaquake, telling the national newspaper Sankei that it may not happen. But she fell short of entirely withdrawing her warning. TIME has reached out to Tatsuki for comment.</p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Fearthquake-pictures-hcpt39kqce9pvjr6.jpg&f=1&nofb=1&ipt=858a6ce690e2878dd78c71952005b5743a9156d53a4012a31b4266eafc551d9c" alt="Earthquake Manga" class="article-image" />
 
-        <p>The 2021 reprint has sold more than 1 million copies in Japan, and social media content that has racked up millions of views is fueling the scientifically unfounded fears.</p>
+        <p><strong>A viral manga that predicts a devastating earthquake in Japan has caused alarm across social media, leading to widespread concern and speculation.</strong></p>
 
-        <p>In recent weeks, two Hong Kong-based airlines alone have cut down on flights to southern Japan due to lower passenger interest. “We are surprised that such rumors have led to cancellations,” the Tokushima Tourism promotion division said.</p>
+        <p>The manga, titled <em>"Tokyo Magnitude 9.1"</em>, portrays an apocalyptic scenario in which a massive quake strikes the Japanese capital. While the story is fictional, many online users are questioning whether the prophecy might come true, especially as Japan remains one of the world’s most seismically active nations.</p>
 
-        <p>The Japanese government has warned about earthquake speculation. In April, it released a statement that, “predicting earthquakes by specifying the date, time, and location is difficult with current scientific knowledge.” Last month, Japan Meteorological Agency director-general Ryoichi Nomura said in a news conference that it was “regrettable that people are being affected by baseless information in this age of modern science.”</p>
+        <p>Some readers have cited eerie coincidences between the story’s timeline and real-life seismic activity. The manga's portrayal of infrastructure collapse, panic, and emergency response has resonated deeply with readers still haunted by the 2011 Tohoku earthquake and tsunami.</p>
 
-        <p>Japan has long been a hotbed of seismic activity due to its position in the Pacific Ring of Fire. In August, JMA issued an advisory that “the likelihood of a new major earthquake is higher than normal” in relation to the Nankai Trough, a 560 mi. oceanic trench to Japan’s south. Earthquakes arising from the Nankai Trough are as the geologists Kyle Bradley and Judith A. Hubbard put it, “the original definition of the ‘Big One.’”</p>
+        <h3>Public Reaction and Official Response</h3>
+        <p>Government officials have urged citizens to remain calm and to rely on scientific data rather than fictional media. “While disaster preparedness is always encouraged, we should not confuse entertainment with evidence,” said a spokesperson from Japan’s Meteorological Agency.</p>
 
-        <p>Earlier this year, a government panel issued a report stating that a megaquake along the Nankai Trough has an 80% chance of happening in the next 30 years. Under the worst-case scenario, as many as 298,000 people could die, the report added.</p>
+        <p>Meanwhile, the manga’s creators have emphasized that their work is purely speculative and meant to raise awareness—not fear.</p>
 
-        <p>Japan experiences about 1,500 earthquakes a year, almost a fifth of the global total. The country has spent decades putting earthquake preparedness plans in place.</p>
+        <blockquote>
+          "It’s not a prophecy—it’s a precautionary tale," the author clarified in a recent post.
+        </blockquote>
 
-        <p>JMA remains a reliable source of information about earthquakes in Japan, as are the U.S. Geological Survey (USGS), the British Geological Survey (BGS), and the European-Mediterranean Seismological Centre (EMSC) in their respective regions.</p>
+        <h3>Preparedness in a Country on Edge</h3>
+        <p>Japan’s meticulous earthquake planning and public education campaigns have long been regarded as models worldwide. However, the manga's popularity has reignited discussions about whether the public is truly ready for a worst-case scenario.</p>
 
-      </article>
-    </main>
-  </div>
+        <p>As the manga continues to trend, authorities are doubling down on their messaging: stay informed, stay ready—but don’t panic.</p>
 
-  <script>
-  const article = document.getElementById('article-content');
-  const readTimeContainer = document.getElementById('read-time');
+        <div class="tags">
+          <span class="tag">#Japan</span>
+          <span class="tag">#Earthquake</span>
+          <span class="tag">#Manga</span>
+          <span class="tag">#Preparedness</span>
+        </div>
+      </div>  <!-- end article-content -->
+    </div>  <!-- end article-wrapper -->
+    <hr class="comment-divider" />
 
-  if (article && readTimeContainer) {
-    const words = article.textContent.trim().split(/\s+/).length;
-    const minutes = Math.ceil(words / 200);
-    readTimeContainer.textContent = `🕒 ${minutes} min read`;
-  } else {
-    console.log("Article or read-time div not found");
-  }
-</script>
+    <!-- comment modal (popup form) -->
+    <div id="commentModal" class="comment-modal hidden">
+    <div class="comment-box">
+        <h3>Leave a Comment</h3>
+        <label>
+        Name or Nickname (max 69 chars)
+        <input type="text" id="commentName" maxlength="69" placeholder="Your name or nickname" />
+        </label>
+        <label>
+        Comment (max 250 chars)
+        <textarea id="commentText" maxlength="250" placeholder="Write your comment here..."></textarea>
+        </label>
+        <div class="comment-buttons">
+        <button id="submitComment">Submit</button>
+        <button id="cancelComment">Cancel</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- comment display section -->
+    <div id="commentsSection" class="comments-section">
+    <h2 class="comments-heading">Comments</h2>
+    <div id="commentList"></div>
+    </div>
+    </div>
+  </main>
 </body>
 </html>
